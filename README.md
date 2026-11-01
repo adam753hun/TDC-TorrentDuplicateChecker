@@ -2,6 +2,12 @@
 
 TDC is a Windows desktop utility that checks torrent video files against a saved SQLite library to help avoid duplicate downloads. It uses file metadata rather than reading or hashing entire videos. C# / .NET 8, Hungarian and English interface.
 
+## Screenshot
+
+![TDC showing exact, similar and missing video matches](docs/images/tdc-preview.png)
+
+*Illustrative screenshot using sample filenames.*
+
 ## Intended purpose
 
 TDC helps you check whether a video may already exist on your drives before downloading it again. It is useful for large collections and external drives that are not always connected. It separates exact filename + byte size matches from similar-title suggestions, with per-video totals and explanations.
