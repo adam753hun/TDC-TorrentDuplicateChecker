@@ -2,7 +2,7 @@ using Microsoft.Data.Sqlite;
 
 namespace Tdc;
 
-// A mezők és táblák a Python TDC formátumával egyeznek meg.
+// A közös SQLite-séma a nyilvántartás fájljait és gyökérmappáit tárolja.
 internal sealed class Database(string path)
 {
     public string PathName { get; } = Path.GetFullPath(path);

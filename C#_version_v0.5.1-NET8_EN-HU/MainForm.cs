@@ -220,7 +220,7 @@ internal sealed class MainForm : Form
         flow.Controls.Add(TextLabel(L.T("Windows fájltársítás"), true));
         flow.Controls.Add(ActionButton(L.T(".torrent fájlok megnyitása a TDC-vel…"), () => { WindowsIntegration.Register(); WindowsIntegration.OpenDefaults(); status.Text = L.T("Regisztráció kész. A Windowsban válaszd a Torrent Duplicate Checker C# alkalmazást."); }));
         flow.Controls.Add(ActionButton(L.T("Windows társítási beállítások megnyitása"), WindowsIntegration.OpenDefaults));
-        flow.Controls.Add(TextLabel(L.T("A társítást a Windowsban véglegesíted. Áthelyezés után regisztráld újra.\nA Pythonos társítástól külön regisztráció; visszaállítható a Windows beállításaiban.")));
+        flow.Controls.Add(TextLabel(L.T("A társítást a Windowsban véglegesíted. Áthelyezés után regisztráld újra.\nA társítás visszaállítható a Windows beállításaiban.")));
     }
 
     private void BuildAbout()
@@ -228,8 +228,8 @@ internal sealed class MainForm : Form
         var (_, body) = Page(L.T("Névjegy"));
         Add(body, TextLabel("TDC (Torrent Duplicate Checker) — C#", true));
         Add(body, TextLabel($"Version: v{Release.Version} · Build {Release.Build} · {Release.Date}"));
-        Add(body, TextLabel("Created by Sarkament Ádám with assistance from AI. © 2026\nThird-party components retain their respective licences."));
-        Add(body, TextLabel(L.T(".NET 8 · Windows Forms · Microsoft.Data.Sqlite · SQLite\n\nVideófájlok metaadatainak összehasonlítása, tartalmi hash nélkül.\nA hasonló cím felismerése fájlnévalapú becslés, nem tartalmi azonosítás.\n\nA C# változat normalizált szerkesztési távolságot használ;\na hasonlósági százalék eltérhet a Pythonos kiadástól.")));
+        Add(body, TextLabel("TDC — Torrent Duplicate Checker\nThird-party components retain their respective licences."));
+        Add(body, TextLabel(L.T(".NET 8 · Windows Forms · Microsoft.Data.Sqlite · SQLite\n\nVideófájlok metaadatainak összehasonlítása, tartalmi hash nélkül.\nA hasonló cím felismerése fájlnévalapú becslés, nem tartalmi azonosítás.\n\nA C# változat normalizált szerkesztési távolságot használ;\na százalék szöveges hasonlóságot jelez, nem tartalmi azonosságot.")));
     }
 
     private bool Confirm(string text) => MessageBox.Show(this, text, "TDC", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;

@@ -72,7 +72,7 @@ internal static class Diagnostics
             string settingsPath = Path.Combine(workspace, "settings.json");
             Check(!Settings.Load(settingsPath).Automatic, "Beállítások alapértékei");
             File.WriteAllText(settingsPath, "{\"automatic\":false,\"close_after_forward\":true,\"client\":\"\"}");
-            Check(Settings.Load(settingsPath).CloseAfterForward, "Python-kompatibilis JSON-kulcsok");
+            Check(Settings.Load(settingsPath).CloseAfterForward, "Mentett JSON-beállítások");
             Settings.Load(settingsPath).Save(settingsPath); Check(Settings.Load(settingsPath).CloseAfterForward, "Beállítások mentése");
             Check(Settings.Load(settingsPath).Language == "hu", "Régi JSON alapból magyar");
             var bilingualSettings = Settings.Load(settingsPath); bilingualSettings.Language = "en"; bilingualSettings.Save(settingsPath);
@@ -85,9 +85,9 @@ internal static class Diagnostics
             L.SetLanguage("unknown"); Check(L.Language == "hu", "Ismeretlen nyelv magyarra esik vissza");
             Check(WindowsIntegration.OpenCommand("C:\\Some path\\TDC.exe").EndsWith("\"%1\""), "Társítási argumentum idézőjelezése");
 
-            // Ha a hívó mellékelt Python-adatbázist, azon a tényleges átjárhatóságot is ellenőrizzük.
-            string fixture = Path.Combine(Path.GetDirectoryName(resultPath)!, "python-fixture.sqlite3");
-            if (File.Exists(fixture)) { db.Import(fixture); Check(db.Files().Single().Name == "python.2026.mkv", "Python SQLite-import"); db.Export(Path.Combine(Path.GetDirectoryName(resultPath)!, "csharp-export.sqlite3")); }
+            // Ha van mellékelt kompatibilitási adatbázis, annak importálását is ellenőrizzük.
+            string fixture = Path.Combine(Path.GetDirectoryName(resultPath)!, "compatibility-fixture.sqlite3");
+            if (File.Exists(fixture)) { db.Import(fixture); Check(db.Files().Single().Name == "sample.2026.mkv", "SQLite kompatibilitási import"); db.Export(Path.Combine(Path.GetDirectoryName(resultPath)!, "csharp-export.sqlite3")); }
             using var form = new MainForm(Path.Combine(workspace, "gui-data")) { ShowInTaskbar = false, Opacity = 0 };
             form.Show(); Application.DoEvents();
             using (var picture = new Bitmap(form.Width, form.Height))

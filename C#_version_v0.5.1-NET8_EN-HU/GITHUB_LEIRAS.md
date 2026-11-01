@@ -1,28 +1,17 @@
-# GitHub-bemutatkozó szövegek
+# TDC — GitHub description / GitHub-leírás
 
-## Rövid angol leírás a repository Description mezőjéhez
+## English
 
-Windows desktop app that checks torrent video files against an offline SQLite library, helping avoid duplicate downloads without reading or hashing entire videos. C# / .NET 8, Hungarian and English UI.
+TDC is a Windows desktop utility that checks torrent video files against a saved SQLite library to help avoid duplicate downloads. It uses file metadata rather than reading or hashing entire videos. C# / .NET 8, Hungarian and English interface.
 
-## Rövid magyar leírás
+TDC is intended for local file management and duplicate checking. It is not intended to obtain or distribute infringing content. Users are responsible for ensuring that their use of the application and any content they access or forward complies with applicable law and the rights of others, including copyright.
 
-A TDC egy Windowsos alkalmazás, amely a torrentben szereplő videókat összeveti a lemezeinken már meglévő fájlok nyilvántartásával. Segít elkerülni a felesleges ismételt letöltéseket, a videók teljes beolvasása és tartalmi hash számítása nélkül.
+The application is provided “as is”, without warranties. To the extent permitted by applicable law, its authors and contributors disclaim liability for damages arising from its use or misuse. This notice does not limit rights or obligations that cannot legally be excluded. It is not a substitute for a software licence.
 
-## A program célja — magyar összefoglaló
+## Magyar
 
-A Torrent Duplicate Checker azért készült, hogy torrent megnyitása előtt könnyen ellenőrizhessük, megvan-e már az adott videó valamelyik háttértárunkon. Különösen akkor hasznos, ha nagy videógyűjteményt tartunk külső HDD-ken, amelyek nem mindig vannak csatlakoztatva.
+A TDC Windowsos alkalmazás, amely a torrentek videófájljait helyi SQLite-nyilvántartással hasonlítja össze a felesleges ismételt letöltések elkerüléséhez. Fájlmetaadatokkal dolgozik, a videók teljes beolvasása és tartalmi hash nélkül. C# / .NET 8, magyar és angol felület.
 
-A program először eltárolja a kiválasztott mappák videófájljainak nevét, méretét, elérési útját és módosítási idejét egy helyi SQLite-adatbázisban. Ezután egy v1 .torrent fájl videóit ehhez a mentett nyilvántartáshoz hasonlítja. Külön jelöli a pontos név+méret egyezést és a hasonló cím alapján feltételezett találatot, évszám- és epizódjelöléseket is figyelembe véve.
+A TDC helyi fájlkezelési és duplikáció-ellenőrzési célra készült. Nem jogsértő tartalmak megszerzésére vagy terjesztésére szolgál. A felhasználó felelőssége, hogy a program használata és a hozzáfért vagy továbbított tartalom megfeleljen az alkalmazandó jogszabályoknak és mások jogainak, ideértve a szerzői jogokat is.
 
-A cél a HDD-kímélő ellenőrzés: nem olvassa végig a videókat, és nem számol SHA-256 vagy más tartalmi hash-t. Emiatt a találatok tájékoztató jellegűek, és nem bizonyítják a fájlok tartalmi azonosságát. A mentett nyilvántartás a HDD leválasztása után is használható.
-
-A felület magyarul és angolul használható. A program támogatja a nyilvántartás exportálását/importálását, valamint a torrent továbbítását egy kiválasztott kliensnek. A továbbítás és az utána történő bezárás beállítható; egyezésnél figyelmeztet.
-
-## A feltöltéshez előkészített fájlok
-
-- `README.md`: angol nyitóoldal a GitHubhoz.
-- `README.hu.md`: részletes magyar útmutató.
-- `CHANGELOG.md`: változásnapló.
-- `.gitignore`: kizárja a szokásos buildmappákat és a személyes `data` mappát. Feltöltés előtt a repository tartalmát ettől függetlenül nézd át.
-
-Ez a frissítés nem hozott létre GitHub-repositoryt, és nem töltött fel semmit.
+A program „adott állapotban”, garancia nélkül érhető el. A jogszabályok által megengedett mértékben a készítők és közreműködők kizárják a felelősségüket a használatból vagy visszaélésből eredő károkért. Ez a nyilatkozat nem korlátozza azokat a jogokat vagy kötelezettségeket, amelyek alkalmazandó jog alapján nem zárhatók ki. A tájékoztató nem helyettesít szoftverlicencet.

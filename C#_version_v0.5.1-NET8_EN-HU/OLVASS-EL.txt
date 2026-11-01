@@ -1,40 +1,7 @@
-TDC - Torrent Duplicate Checker · C# v0.5.1-cs · Build 20261027
+TDC — Torrent Duplicate Checker v0.5.1-cs
 
-WINDOWSOS KIADÁS
-Csomagold ki a teljes mappát írható helyre. Indítsd a TDC.exe fájlt.
-A többi fájlt és a licenceket is tartsd meg. Python nem kell.
-Szükséges: telepített .NET 8 Desktop Runtime x64.
-A sima .NET Runtime nem elég a Windows Forms felülethez.
-Letöltés: https://dotnet.microsoft.com/download/dotnet/8.0
-Windows / Desktop Runtime / x64 telepítőt válassz.
-A Windows x64 rendszerhez készült; Windows 10-en ellenőriztük.
-
-Nyilvántartás → Mappa hozzáadása: videók metaadatainak beolvasása.
-Torrent ellenőrzése → .torrent ellenőrzése: v1 torrent összehasonlítása.
-Dupla kattintás a találaton: részletes indok. A hasonló cím becslés.
-Zöld: pontos név+méret. Sárga: hasonló cím. Piros: nincs találat.
-A pontos név+méret sem bizonyít tartalmi azonosságot.
-
-Az adatbázis és beállítások a TDC.exe melletti data mappában vannak.
-Frissítéskor őrizd meg, továbbküldéskor a személyes data mappát hagyd ki.
-A Python-verzió exportja importálható a Nyilvántartás fülön.
-Import előtt a jelenlegi adatokról automatikus biztonsági mentés készül.
-
-A Beállításokban válaszd ki a kliens .exe fájlját vagy parancsikonját,
-és mentsd a beállításokat. Automatikus átadás és átadás utáni bezárás
-külön kapcsolható. A kliens átadáskor letöltést is indíthat.
-A fájltársítást a Windowsban te véglegesíted.
-
-Ez a kisebb, telepített .NET 8-ra támaszkodó C#-os kiadás. A hasonlóság százaléka eltérhet a Python-verziótól.
-ISO, játékok, magnet és v2/hibrid torrent még nem támogatott.
-További tudnivalók: README.md. Verziótörténet: CHANGELOG.md.
-
-Created by adam753hun with assistance from AI. © 2026
-Third-party components retain their respective licences.
-
-NYELVVÁLASZTÁS / LANGUAGE
-Beállítások / Settings → Nyelv / Language → Magyar vagy English.
-A választás azonnal érvényes; megőrzéséhez Beállítások mentése / Save settings.
-Régi beállításfájlnál a magyar marad az alapértelmezés.
-Version remains v0.5.1-cs; .NET 8 Desktop Runtime x64 is required.
-English introduction: README.md. Magyar útmutató: README.hu.md.
+.NET 8 Desktop Runtime x64 szükséges / required.
+Indítás / Launch: TDC.exe. A teljes mappát tartsd meg / keep the full folder.
+Magyar útmutató: README.hu.md. English: README.md.
+Felelős használat / Responsible use: USAGE_NOTICE.md.
+A személyes data mappát ne publikáld / Do not publish your personal data folder.

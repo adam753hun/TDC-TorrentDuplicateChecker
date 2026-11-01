@@ -35,7 +35,6 @@ internal static class Matching
     }
 
     // Normalizált Levenshtein-hasonlóság. Két sor memóriát használ, nem teljes mátrixot.
-    // A Python SequenceMatcher százalékától eltérhet; a név+méret szabály változatlan.
     public static double Score(string a, string b)
     {
         if (a == b) return 1;

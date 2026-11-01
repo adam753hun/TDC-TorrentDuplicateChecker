@@ -19,7 +19,7 @@ internal sealed record Report(List<MatchRow> Rows, int Total, int Exact, int Sim
 
 internal sealed class Settings
 {
-    // A JSON-kulcsok a Python-változattal egyeznek meg.
+    // A JSON-kulcsok stabilak maradnak a beállításfájlok kompatibilitásához.
     [System.Text.Json.Serialization.JsonPropertyName("automatic")]
     public bool Automatic { get; set; }
     [System.Text.Json.Serialization.JsonPropertyName("close_after_forward")]
