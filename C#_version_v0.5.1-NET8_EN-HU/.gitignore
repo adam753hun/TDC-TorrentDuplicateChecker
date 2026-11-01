@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+data/
+Windows-x64/
+Windows-NET8-x64/
+*.user
+*.suo

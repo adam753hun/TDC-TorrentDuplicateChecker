@@ -1,0 +1,17 @@
+TDC C# v0.5.1-cs — third-party components
+
+.NET 8 Desktop Runtime is installed separately; it is NOT bundled in this edition.
+The application's own .NET code uses Windows Forms.
+
+Microsoft.Data.Sqlite / Microsoft.Data.Sqlite.Core 8.0.32:
+Copyright (c) .NET Foundation and Contributors. MIT license.
+See Microsoft.Data.Sqlite-LICENSE.txt.
+
+SQLitePCLRaw bundle/core/provider/lib.e_sqlite3 2.1.13:
+Copyright 2014-2024 SourceGear, LLC (package metadata).
+Apache License 2.0; see Apache-2.0.txt and SQLitePCLRaw-NOTICE.txt.
+https://github.com/ericsink/SQLitePCL.raw
+
+SQLite: public domain. https://sqlite.org/copyright.html
+
+Third-party components retain their respective licences.
